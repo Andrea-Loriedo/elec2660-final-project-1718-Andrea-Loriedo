@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65014D9F1FC1A6AB00181B62 /* Main menu background.png in Resources */ = {isa = PBXBuildFile; fileRef = 65014D9E1FC1A6AB00181B62 /* Main menu background.png */; };
+		651417BF1FC1F49900030A4C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651417BE1FC1F49900030A4C /* PageViewController.m */; };
+		651417C21FC1F52C00030A4C /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651417C11FC1F52C00030A4C /* InstructionsViewController.m */; };
+		657BA7551FC3507700B11C4B /* UPI Background1.2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657BA7541FC3507700B11C4B /* UPI Background1.2.png */; };
+		657BA7571FC3613300B11C4B /* Date Picker Square (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 657BA7561FC3613300B11C4B /* Date Picker Square (1).png */; };
 		65AF64511FC0E240009D6315 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64501FC0E240009D6315 /* AppDelegate.m */; };
 		65AF64541FC0E240009D6315 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64531FC0E240009D6315 /* ViewController.m */; };
 		65AF64571FC0E240009D6315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AF64551FC0E240009D6315 /* Main.storyboard */; };
@@ -15,6 +20,8 @@
 		65AF645F1FC0E240009D6315 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF645E1FC0E240009D6315 /* main.m */; };
 		65AF64691FC0E240009D6315 /* Dot_to_Dot_v_1_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64681FC0E240009D6315 /* Dot_to_Dot_v_1_0Tests.m */; };
 		65AF64741FC0E241009D6315 /* Dot_to_Dot_v_1_0UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64731FC0E241009D6315 /* Dot_to_Dot_v_1_0UITests.m */; };
+		65AF64821FC0E783009D6315 /* DotToDot logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 65AF64811FC0E782009D6315 /* DotToDot logo.png */; };
+		65AF64871FC0E9BC009D6315 /* IndieFlower.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65AF64861FC0E9BC009D6315 /* IndieFlower.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65014D9E1FC1A6AB00181B62 /* Main menu background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main menu background.png"; sourceTree = "<group>"; };
+		651417BD1FC1F49900030A4C /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		651417BE1FC1F49900030A4C /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		651417C01FC1F52C00030A4C /* InstructionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
+		651417C11FC1F52C00030A4C /* InstructionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
+		657BA7541FC3507700B11C4B /* UPI Background1.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UPI Background1.2.png"; sourceTree = "<group>"; };
+		657BA7561FC3613300B11C4B /* Date Picker Square (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Date Picker Square (1).png"; sourceTree = "<group>"; };
 		65AF644C1FC0E240009D6315 /* Dot to Dot v.1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dot to Dot v.1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65AF644F1FC0E240009D6315 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65AF64501FC0E240009D6315 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +65,8 @@
 		65AF646F1FC0E241009D6315 /* Dot to Dot v.1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dot to Dot v.1.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65AF64731FC0E241009D6315 /* Dot_to_Dot_v_1_0UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dot_to_Dot_v_1_0UITests.m; sourceTree = "<group>"; };
 		65AF64751FC0E241009D6315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65AF64811FC0E782009D6315 /* DotToDot logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DotToDot logo.png"; sourceTree = "<group>"; };
+		65AF64861FC0E9BC009D6315 /* IndieFlower.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IndieFlower.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +117,17 @@
 		65AF644E1FC0E240009D6315 /* Dot to Dot v.1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				65AF64851FC0E8F7009D6315 /* Images */,
+				65AF64831FC0E8A8009D6315 /* Fonts */,
 				65AF644F1FC0E240009D6315 /* AppDelegate.h */,
 				65AF64501FC0E240009D6315 /* AppDelegate.m */,
 				65AF64521FC0E240009D6315 /* ViewController.h */,
 				65AF64531FC0E240009D6315 /* ViewController.m */,
 				65AF64551FC0E240009D6315 /* Main.storyboard */,
+				651417C01FC1F52C00030A4C /* InstructionsViewController.h */,
+				651417C11FC1F52C00030A4C /* InstructionsViewController.m */,
+				651417BD1FC1F49900030A4C /* PageViewController.h */,
+				651417BE1FC1F49900030A4C /* PageViewController.m */,
 				65AF64581FC0E240009D6315 /* Assets.xcassets */,
 				65AF645A1FC0E240009D6315 /* LaunchScreen.storyboard */,
 				65AF645D1FC0E240009D6315 /* Info.plist */,
@@ -130,6 +152,25 @@
 				65AF64751FC0E241009D6315 /* Info.plist */,
 			);
 			path = "Dot to Dot v.1.0UITests";
+			sourceTree = "<group>";
+		};
+		65AF64831FC0E8A8009D6315 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				65AF64861FC0E9BC009D6315 /* IndieFlower.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		65AF64851FC0E8F7009D6315 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				65014D9E1FC1A6AB00181B62 /* Main menu background.png */,
+				657BA7561FC3613300B11C4B /* Date Picker Square (1).png */,
+				65AF64811FC0E782009D6315 /* DotToDot logo.png */,
+				657BA7541FC3507700B11C4B /* UPI Background1.2.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +279,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65AF64871FC0E9BC009D6315 /* IndieFlower.ttf in Resources */,
+				657BA7551FC3507700B11C4B /* UPI Background1.2.png in Resources */,
+				65014D9F1FC1A6AB00181B62 /* Main menu background.png in Resources */,
 				65AF645C1FC0E240009D6315 /* LaunchScreen.storyboard in Resources */,
+				657BA7571FC3613300B11C4B /* Date Picker Square (1).png in Resources */,
 				65AF64591FC0E240009D6315 /* Assets.xcassets in Resources */,
+				65AF64821FC0E783009D6315 /* DotToDot logo.png in Resources */,
 				65AF64571FC0E240009D6315 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +314,8 @@
 				65AF64541FC0E240009D6315 /* ViewController.m in Sources */,
 				65AF645F1FC0E240009D6315 /* main.m in Sources */,
 				65AF64511FC0E240009D6315 /* AppDelegate.m in Sources */,
+				651417C21FC1F52C00030A4C /* InstructionsViewController.m in Sources */,
+				651417BF1FC1F49900030A4C /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
