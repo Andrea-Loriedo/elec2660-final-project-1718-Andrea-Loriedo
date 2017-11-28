@@ -101,7 +101,7 @@
         <!--View Controller-->
         <scene sceneID="c88-Fl-bWB">
             <objects>
-                <viewController id="NFC-Sv-8bH" sceneMemberID="viewController">
+                <viewController id="NFC-Sv-8bH" customClass="UPIViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3MA-dj-maR" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,20 +165,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date Picker Square (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="44J-eB-Ogf">
-                                <rect key="frame" x="170" y="665" width="428" height="216"/>
+                                <rect key="frame" x="170" y="665" width="438" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="408" id="ejt-OD-7O3"/>
                                     <constraint firstAttribute="height" constant="216" id="vJn-uq-vm4"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-L6-SIF">
-                                <rect key="frame" x="224" y="665" width="320" height="216"/>
+                                <rect key="frame" x="229" y="665" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="532791608.68567401">
                                     <!--2017-11-19 13:40:08 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-4p-Y7a">
-                                <rect key="frame" x="263" y="924" width="243" height="64"/>
+                                <rect key="frame" x="263" y="924" width="253" height="64"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="35"/>
                                 <state key="normal" title="Test motor skills">
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,7 +194,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter personal information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-xd-Ryd">
-                                <rect key="frame" x="176" y="366" width="416" height="55.5"/>
+                                <rect key="frame" x="165" y="366" width="448.5" height="44.5"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -237,11 +237,20 @@
                             <constraint firstItem="kxe-Z1-Nfa" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="531" id="wul-8b-Tn6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hyX-WS-zUb"/>
+                        <connections>
+                            <action selector="backgroundPressed:" destination="NFC-Sv-8bH" eventType="touchUpInside" id="SHi-IM-mJX"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="kkC-ix-rg3" id="BAg-Qn-dKd"/>
+                        <outlet property="idCodeTextField" destination="UBR-EN-xDM" id="pXR-7Q-urQ"/>
+                        <outlet property="nameTextField" destination="GJj-GO-DPF" id="0j5-tN-DbN"/>
+                        <outlet property="surnameTextField" destination="Ji8-jq-OKS" id="Ycs-xw-V4x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FS-jZ-YLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="843"/>
+            <point key="canvasLocation" x="1592.96875" y="842.578125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hxj-76-1h2">

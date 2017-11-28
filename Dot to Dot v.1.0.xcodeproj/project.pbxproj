@@ -13,7 +13,7 @@
 		657BA7551FC3507700B11C4B /* UPI Background1.2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657BA7541FC3507700B11C4B /* UPI Background1.2.png */; };
 		657BA7571FC3613300B11C4B /* Date Picker Square (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 657BA7561FC3613300B11C4B /* Date Picker Square (1).png */; };
 		65AF64511FC0E240009D6315 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64501FC0E240009D6315 /* AppDelegate.m */; };
-		65AF64541FC0E240009D6315 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64531FC0E240009D6315 /* ViewController.m */; };
+		65AF64541FC0E240009D6315 /* UPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64531FC0E240009D6315 /* UPIViewController.m */; };
 		65AF64571FC0E240009D6315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AF64551FC0E240009D6315 /* Main.storyboard */; };
 		65AF64591FC0E240009D6315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65AF64581FC0E240009D6315 /* Assets.xcassets */; };
 		65AF645C1FC0E240009D6315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AF645A1FC0E240009D6315 /* LaunchScreen.storyboard */; };
@@ -52,8 +52,8 @@
 		65AF644C1FC0E240009D6315 /* Dot to Dot v.1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dot to Dot v.1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65AF644F1FC0E240009D6315 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65AF64501FC0E240009D6315 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65AF64521FC0E240009D6315 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		65AF64531FC0E240009D6315 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65AF64521FC0E240009D6315 /* UPIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UPIViewController.h; sourceTree = "<group>"; };
+		65AF64531FC0E240009D6315 /* UPIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UPIViewController.m; sourceTree = "<group>"; };
 		65AF64561FC0E240009D6315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65AF64581FC0E240009D6315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65AF645B1FC0E240009D6315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 				65AF64831FC0E8A8009D6315 /* Fonts */,
 				65AF644F1FC0E240009D6315 /* AppDelegate.h */,
 				65AF64501FC0E240009D6315 /* AppDelegate.m */,
-				65AF64521FC0E240009D6315 /* ViewController.h */,
-				65AF64531FC0E240009D6315 /* ViewController.m */,
+				65AF64521FC0E240009D6315 /* UPIViewController.h */,
+				65AF64531FC0E240009D6315 /* UPIViewController.m */,
 				65AF64551FC0E240009D6315 /* Main.storyboard */,
 				651417C01FC1F52C00030A4C /* InstructionsViewController.h */,
 				651417C11FC1F52C00030A4C /* InstructionsViewController.m */,
@@ -311,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65AF64541FC0E240009D6315 /* ViewController.m in Sources */,
+				65AF64541FC0E240009D6315 /* UPIViewController.m in Sources */,
 				65AF645F1FC0E240009D6315 /* main.m in Sources */,
 				65AF64511FC0E240009D6315 /* AppDelegate.m in Sources */,
 				651417C21FC1F52C00030A4C /* InstructionsViewController.m in Sources */,
