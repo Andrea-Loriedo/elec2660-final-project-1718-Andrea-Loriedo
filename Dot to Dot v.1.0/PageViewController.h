@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstructionsViewController.h"
 
-@interface PageViewController : UIPageViewController <UIPageViewControllerDataSource>
+@interface PageViewController : UIPageViewController <UIPageViewControllerDataSource> //Protocol needed to create the Page View Controller
+
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "PageViewController.h"
 #import "InstructionsViewController.h"
+#import "TrialViewController.h"
 
 @interface PageViewController ()
 
@@ -21,13 +22,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    instructions = @[@"Instructionspage1.png",@"Instructionspage2.png",@"Instructionspage3.png",@"Instructionspage4.png"];
+    instructions =
+  @[@"Instructionspage1.png",@"Instructionspage2.png",@"Instructionspage3.png",@"startTrial"];
     self.dataSource = self;
     
     InstructionsViewController *initialValue = (InstructionsViewController *)[self viewControllerAtIndex:0];
     NSArray *viewControllers = [NSArray arrayWithObjects:initialValue, nil];
     
     [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +66,7 @@
      viewControllerAfterViewController:(UIViewController *)viewController {
             NSUInteger index = ((InstructionsViewController *) viewController).pageIndex;
     if (index == NSNotFound){
+        
         return nil;
 }
     index++;
@@ -72,4 +76,21 @@
     return [self viewControllerAtIndex:index];
 }
 
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ /*    if ([[segue identifier]isEqualToString:@"ShowTrialView"]) {
+         
+     TrialViewController *destinationViewController = [segue destinationViewController];
+     }
+     
+ 
+
+     @end */
+ }
+
 @end
+     

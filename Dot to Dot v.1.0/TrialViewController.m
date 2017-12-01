@@ -1,24 +1,22 @@
 //
-//  InstructionsViewController.m
+//  TrialViewController.m
 //  Dot to Dot v.1.0
 //
-//  Created by Andrea on 19/11/17.
+//  Created by Andrea on 1/12/17.
 //  Copyright © 2017 University of Leeds. All rights reserved.
 //
 
-#import "InstructionsViewController.h"
+#import "TrialViewController.h"
 
-@interface InstructionsViewController ()
+@interface TrialViewController ()
 
 @end
 
-@implementation InstructionsViewController
+@implementation TrialViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.instructionsImages.image = [UIImage imageNamed: self.storeImage]; //Sets the images stored in the 'storeImage' property as the images to be displayed in the Image View
 }
 
 - (void)didReceiveMemoryWarning {

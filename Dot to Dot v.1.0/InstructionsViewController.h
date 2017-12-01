@@ -10,6 +10,8 @@
 
 @interface InstructionsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *instructionsImages;
+@property (weak, nonatomic) IBOutlet UIButton *startTrialButton;
+
 
 @property NSString *storeImage;
 @property NSUInteger pageIndex;

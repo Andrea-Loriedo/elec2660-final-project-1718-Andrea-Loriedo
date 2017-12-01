@@ -38,7 +38,7 @@
                                     <color key="titleColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kWa-1p-Xtf" kind="show" id="w3Q-45-B4k"/>
+                                    <segue destination="kWa-1p-Xtf" kind="presentation" identifier="ShowInstructions" id="w3Q-45-B4k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41q-eR-crk">
@@ -49,7 +49,7 @@
                                     <color key="titleColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NFC-Sv-8bH" kind="presentation" modalTransitionStyle="crossDissolve" id="f80-Xe-7P1"/>
+                                    <segue destination="NFC-Sv-8bH" kind="show" identifier="ShowUPIView" id="f80-Xe-7P1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,6 +69,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instructionspage4" translatesAutoresizingMaskIntoConstraints="NO" id="aRh-Uo-q1o">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-tL-56Q">
+                                <rect key="frame" x="-40" y="351" width="198" height="323"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="lju-px-i9u"/>
+                                    <constraint firstAttribute="height" constant="323" id="pwJ-J4-3St"/>
+                                </constraints>
+                                <state key="normal" image="Start trial Button red.png"/>
+                                <connections>
+                                    <segue destination="NFC-Sv-8bH" kind="presentation" id="aes-Qn-gP3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paX-oI-F7K">
+                                <rect key="frame" x="679" y="87" width="69" height="368"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="KMg-AI-cko"/>
+                                    <constraint firstAttribute="height" constant="368" id="mBD-KT-xcH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Back to main menu button.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="N1J-VB-aLQ"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iXk-xK-NyL">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
@@ -77,18 +102,27 @@
                         <constraints>
                             <constraint firstItem="iXk-xK-NyL" firstAttribute="leading" secondItem="N0b-ha-0Li" secondAttribute="leading" id="2ly-E6-MjW"/>
                             <constraint firstItem="iXk-xK-NyL" firstAttribute="trailing" secondItem="N0b-ha-0Li" secondAttribute="trailing" id="Bip-av-ZHv"/>
+                            <constraint firstItem="N0b-ha-0Li" firstAttribute="trailing" secondItem="paX-oI-F7K" secondAttribute="trailing" constant="20" id="Hgc-n2-nCz"/>
+                            <constraint firstItem="aRh-Uo-q1o" firstAttribute="bottom" secondItem="N0b-ha-0Li" secondAttribute="bottom" id="HrP-FQ-nj3"/>
+                            <constraint firstItem="aRh-Uo-q1o" firstAttribute="trailing" secondItem="N0b-ha-0Li" secondAttribute="trailing" id="K2S-qy-7iR"/>
+                            <constraint firstItem="aRh-Uo-q1o" firstAttribute="top" secondItem="1YS-gf-DFl" secondAttribute="top" id="K2k-s3-mrK"/>
+                            <constraint firstItem="aRh-Uo-q1o" firstAttribute="leading" secondItem="N0b-ha-0Li" secondAttribute="leading" id="MJp-Nn-iDm"/>
+                            <constraint firstItem="XoV-tL-56Q" firstAttribute="top" secondItem="N0b-ha-0Li" secondAttribute="top" constant="331" id="N9K-sP-6eW"/>
                             <constraint firstItem="iXk-xK-NyL" firstAttribute="top" secondItem="1YS-gf-DFl" secondAttribute="top" id="ThX-ZB-q9i"/>
                             <constraint firstItem="iXk-xK-NyL" firstAttribute="bottom" secondItem="N0b-ha-0Li" secondAttribute="bottom" id="Znw-4J-quz"/>
+                            <constraint firstItem="paX-oI-F7K" firstAttribute="top" secondItem="N0b-ha-0Li" secondAttribute="top" constant="67" id="mmc-mo-R41"/>
+                            <constraint firstItem="N0b-ha-0Li" firstAttribute="leading" secondItem="XoV-tL-56Q" secondAttribute="leading" constant="40" id="nrm-7y-Im4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N0b-ha-0Li"/>
                     </view>
                     <connections>
                         <outlet property="instructionsImages" destination="iXk-xK-NyL" id="rtE-ED-MTs"/>
+                        <outlet property="startTrialButton" destination="XoV-tL-56Q" id="krp-kg-9ug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnP-aY-cFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2526" y="-719"/>
+            <point key="canvasLocation" x="1914.84375" y="-714.2578125"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="efK-k1-I0n">
@@ -96,7 +130,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="kWa-1p-Xtf" customClass="PageViewController" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwx-a1-gWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="-719"/>
+            <point key="canvasLocation" x="1915" y="60"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="c88-Fl-bWB">
@@ -165,26 +199,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date Picker Square (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="44J-eB-Ogf">
-                                <rect key="frame" x="170" y="665" width="438" height="216"/>
+                                <rect key="frame" x="170" y="665" width="428" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="408" id="ejt-OD-7O3"/>
                                     <constraint firstAttribute="height" constant="216" id="vJn-uq-vm4"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-L6-SIF">
-                                <rect key="frame" x="229" y="665" width="320" height="216"/>
+                                <rect key="frame" x="224" y="665" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="532791608.68567401">
                                     <!--2017-11-19 13:40:08 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-4p-Y7a">
-                                <rect key="frame" x="263" y="924" width="253" height="64"/>
+                                <rect key="frame" x="263" y="924" width="243" height="64"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="35"/>
                                 <state key="normal" title="Test motor skills">
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3NK-6E-36a" kind="presentation" modalTransitionStyle="crossDissolve" id="hHQ-fi-Jur"/>
+                                    <segue destination="3NK-6E-36a" kind="presentation" identifier="UPItoTrial" modalTransitionStyle="crossDissolve" id="hHQ-fi-Jur"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wo-lT-1Nw">
@@ -194,11 +228,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter personal information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-xd-Ryd">
-                                <rect key="frame" x="165" y="366" width="448.5" height="44.5"/>
+                                <rect key="frame" x="176" y="366" width="416" height="55.5"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02R-Vr-v8v">
+                                <rect key="frame" x="20" y="46" width="116" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="3HH-KA-8KI"/>
+                                    <constraint firstAttribute="width" constant="116" id="Phc-6g-1GZ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Back button.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Ou0-Tc-W1M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -217,8 +262,10 @@
                             <constraint firstItem="44J-eB-Ogf" firstAttribute="centerX" secondItem="hyX-WS-zUb" secondAttribute="centerX" id="Uzd-gM-QSl"/>
                             <constraint firstItem="Ji8-jq-OKS" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="187" id="V6m-EQ-Hmr"/>
                             <constraint firstItem="0h4-L6-SIF" firstAttribute="centerX" secondItem="hyX-WS-zUb" secondAttribute="centerX" id="W9p-Cu-Zdo"/>
+                            <constraint firstItem="02R-Vr-v8v" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="26" id="ZDF-by-SLO"/>
                             <constraint firstItem="hyX-WS-zUb" firstAttribute="bottom" secondItem="2SL-4p-Y7a" secondAttribute="bottom" constant="36" id="aVD-Ao-eEn"/>
                             <constraint firstItem="GMW-GS-6z2" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="481" id="bb8-9f-60K"/>
+                            <constraint firstItem="02R-Vr-v8v" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="20" id="eAe-A6-ZgE"/>
                             <constraint firstItem="GJj-GO-DPF" firstAttribute="height" secondItem="Ji8-jq-OKS" secondAttribute="height" id="edH-Pf-V4U"/>
                             <constraint firstItem="Qzf-xd-Ryd" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="346" id="f6k-kv-Qgk"/>
                             <constraint firstItem="hyX-WS-zUb" firstAttribute="trailing" secondItem="2SL-4p-Y7a" secondAttribute="trailing" constant="262" id="ihq-hT-ggH"/>
@@ -250,12 +297,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FS-jZ-YLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592.96875" y="842.578125"/>
+            <point key="canvasLocation" x="1914.84375" y="840.8203125"/>
         </scene>
-        <!--View Controller-->
+        <!--Trial View Controller-->
         <scene sceneID="Hxj-76-1h2">
             <objects>
-                <viewController id="3NK-6E-36a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrialViewController" id="3NK-6E-36a" customClass="TrialViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAx-F3-FGe">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,12 +312,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUE-1l-fnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2526" y="843"/>
+            <point key="canvasLocation" x="2938" y="841"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Back button.png" width="366" height="157"/>
+        <image name="Back to main menu button.png" width="158" height="946"/>
         <image name="Date Picker Square (1).png" width="428" height="237"/>
+        <image name="Instructionspage4" width="1557" height="2069"/>
         <image name="Main menu background.png" width="1537" height="2047"/>
+        <image name="Start trial Button red.png" width="318" height="555"/>
         <image name="UPI Background1.2.png" width="1538" height="2048"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aes-Qn-gP3"/>
+        <segue reference="N1J-VB-aLQ"/>
+    </inferredMetricsTieBreakers>
 </document>

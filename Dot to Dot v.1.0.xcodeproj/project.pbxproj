@@ -10,6 +10,10 @@
 		65014D9F1FC1A6AB00181B62 /* Main menu background.png in Resources */ = {isa = PBXBuildFile; fileRef = 65014D9E1FC1A6AB00181B62 /* Main menu background.png */; };
 		651417BF1FC1F49900030A4C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651417BE1FC1F49900030A4C /* PageViewController.m */; };
 		651417C21FC1F52C00030A4C /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651417C11FC1F52C00030A4C /* InstructionsViewController.m */; };
+		656A33E21FD159E8003FE35E /* TrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A33E11FD159E8003FE35E /* TrialViewController.m */; };
+		656A33E61FD16BBB003FE35E /* Start trial Button red.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E51FD16BBB003FE35E /* Start trial Button red.png */; };
+		656A33E81FD1809C003FE35E /* Back to main menu button.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E71FD1809C003FE35E /* Back to main menu button.png */; };
+		656A33EA1FD191F9003FE35E /* Back button.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E91FD191F9003FE35E /* Back button.png */; };
 		657BA7551FC3507700B11C4B /* UPI Background1.2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657BA7541FC3507700B11C4B /* UPI Background1.2.png */; };
 		657BA7571FC3613300B11C4B /* Date Picker Square (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 657BA7561FC3613300B11C4B /* Date Picker Square (1).png */; };
 		65AF64511FC0E240009D6315 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AF64501FC0E240009D6315 /* AppDelegate.m */; };
@@ -47,6 +51,11 @@
 		651417BE1FC1F49900030A4C /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		651417C01FC1F52C00030A4C /* InstructionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
 		651417C11FC1F52C00030A4C /* InstructionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
+		656A33E01FD159E8003FE35E /* TrialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrialViewController.h; sourceTree = "<group>"; };
+		656A33E11FD159E8003FE35E /* TrialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrialViewController.m; sourceTree = "<group>"; };
+		656A33E51FD16BBB003FE35E /* Start trial Button red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start trial Button red.png"; sourceTree = "<group>"; };
+		656A33E71FD1809C003FE35E /* Back to main menu button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back to main menu button.png"; sourceTree = "<group>"; };
+		656A33E91FD191F9003FE35E /* Back button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back button.png"; sourceTree = "<group>"; };
 		657BA7541FC3507700B11C4B /* UPI Background1.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UPI Background1.2.png"; sourceTree = "<group>"; };
 		657BA7561FC3613300B11C4B /* Date Picker Square (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Date Picker Square (1).png"; sourceTree = "<group>"; };
 		65AF644C1FC0E240009D6315 /* Dot to Dot v.1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dot to Dot v.1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +135,8 @@
 				65AF64551FC0E240009D6315 /* Main.storyboard */,
 				651417C01FC1F52C00030A4C /* InstructionsViewController.h */,
 				651417C11FC1F52C00030A4C /* InstructionsViewController.m */,
+				656A33E01FD159E8003FE35E /* TrialViewController.h */,
+				656A33E11FD159E8003FE35E /* TrialViewController.m */,
 				651417BD1FC1F49900030A4C /* PageViewController.h */,
 				651417BE1FC1F49900030A4C /* PageViewController.m */,
 				65AF64581FC0E240009D6315 /* Assets.xcassets */,
@@ -165,10 +176,13 @@
 		65AF64851FC0E8F7009D6315 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				656A33E71FD1809C003FE35E /* Back to main menu button.png */,
 				65014D9E1FC1A6AB00181B62 /* Main menu background.png */,
 				657BA7561FC3613300B11C4B /* Date Picker Square (1).png */,
 				65AF64811FC0E782009D6315 /* DotToDot logo.png */,
 				657BA7541FC3507700B11C4B /* UPI Background1.2.png */,
+				656A33E51FD16BBB003FE35E /* Start trial Button red.png */,
+				656A33E91FD191F9003FE35E /* Back button.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -284,9 +298,12 @@
 				65014D9F1FC1A6AB00181B62 /* Main menu background.png in Resources */,
 				65AF645C1FC0E240009D6315 /* LaunchScreen.storyboard in Resources */,
 				657BA7571FC3613300B11C4B /* Date Picker Square (1).png in Resources */,
+				656A33EA1FD191F9003FE35E /* Back button.png in Resources */,
+				656A33E81FD1809C003FE35E /* Back to main menu button.png in Resources */,
 				65AF64591FC0E240009D6315 /* Assets.xcassets in Resources */,
 				65AF64821FC0E783009D6315 /* DotToDot logo.png in Resources */,
 				65AF64571FC0E240009D6315 /* Main.storyboard in Resources */,
+				656A33E61FD16BBB003FE35E /* Start trial Button red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65AF64541FC0E240009D6315 /* UPIViewController.m in Sources */,
+				656A33E21FD159E8003FE35E /* TrialViewController.m in Sources */,
 				65AF645F1FC0E240009D6315 /* main.m in Sources */,
 				65AF64511FC0E240009D6315 /* AppDelegate.m in Sources */,
 				651417C21FC1F52C00030A4C /* InstructionsViewController.m in Sources */,
