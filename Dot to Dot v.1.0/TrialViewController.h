@@ -10,4 +10,9 @@
 
 @interface TrialViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *StartButton;
+@property (weak, nonatomic) IBOutlet UIButton *dot1;
+
+- (IBAction)startButtonDragged:(id)sender;
+
 @end
