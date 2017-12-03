@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *dot1;
 
 - (IBAction)startButtonDragged:(id)sender;
+- (IBAction)startButtonPressed:(id)sender;
 
 @end

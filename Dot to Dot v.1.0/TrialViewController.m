@@ -57,12 +57,13 @@ UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] init
     } else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         self.StartButton = nil;
     }
-    /*if ([draggedView isKindOfClass:[UIButton class]] && !self.dot1) { //dot1
+   /*if ([draggedView isKindOfClass:[UIButton class]] && !self.dot1) { //dot1
         self.dot1 = (UIButton *)draggedView;
         NSLog(@"dot1 Drag Enter: %ld", (long)self.dot1.tag);
         
         // send enter event to your button
         [self.dot1 sendActionsForControlEvents:UIControlEventTouchDragEnter];
+        _dot1.hidden = NO;
     }
     
     if (self.dot1 && ![self.dot1 isEqual:draggedView]) {
@@ -89,6 +90,10 @@ UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] init
 
 */
 - (IBAction)startButtonDragged:(id)sender {
+}
+
+- (IBAction)startButtonPressed:(id)sender {
+    _dot1.hidden = NO;
 }
 @end
     
