@@ -199,20 +199,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date Picker Square (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="44J-eB-Ogf">
-                                <rect key="frame" x="170" y="665" width="428" height="216"/>
+                                <rect key="frame" x="170" y="665" width="438" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="408" id="ejt-OD-7O3"/>
                                     <constraint firstAttribute="height" constant="216" id="vJn-uq-vm4"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-L6-SIF">
-                                <rect key="frame" x="224" y="665" width="320" height="216"/>
+                                <rect key="frame" x="229" y="665" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="532791608.68567401">
                                     <!--2017-11-19 13:40:08 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-4p-Y7a">
-                                <rect key="frame" x="263" y="924" width="243" height="64"/>
+                                <rect key="frame" x="263" y="924" width="253" height="64"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="35"/>
                                 <state key="normal" title="Test motor skills">
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter personal information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-xd-Ryd">
-                                <rect key="frame" x="176" y="366" width="416" height="55.5"/>
+                                <rect key="frame" x="165" y="366" width="448.5" height="44.5"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -315,7 +315,6 @@
                                 </constraints>
                                 <state key="normal" image="StartButton.png"/>
                                 <connections>
-                                    <action selector="startButtonDragged:" destination="3NK-6E-36a" eventType="touchDragInside" id="sFA-gM-RLE"/>
                                     <action selector="startButtonPressed:" destination="3NK-6E-36a" eventType="touchDown" id="9iP-1l-8VM"/>
                                 </connections>
                             </button>
@@ -330,49 +329,37 @@
                                     <segue destination="fvL-75-jDj" kind="presentation" id="mil-gg-Q0k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BF-eV-d5d">
-                                <rect key="frame" x="349" y="64" width="70" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8c-hn-sL8">
+                                <rect key="frame" x="354" y="482" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MVG-hd-xTi"/>
+                                    <constraint firstAttribute="width" constant="60" id="uXD-6z-BmP"/>
+                                </constraints>
                                 <state key="normal" image="DotSprite.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-14-f04">
-                                <rect key="frame" x="36" y="278" width="70" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="DotSprite.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55s-BH-nHL">
-                                <rect key="frame" x="36" y="711" width="70" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="DotSprite.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEl-zX-H28">
-                                <rect key="frame" x="349" y="873" width="70" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="DotSprite.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzQ-6F-Y30">
-                                <rect key="frame" x="568" y="477" width="70" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="DotSprite.png"/>
+                                <connections>
+                                    <action selector="button1Click:" destination="3NK-6E-36a" eventType="touchDragEnter" id="4Qe-Sg-8Fa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99338012933731079" green="0.94684535264968872" blue="0.79886037111282349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="G8c-hn-sL8" firstAttribute="top" secondItem="bYa-dC-9PF" secondAttribute="top" constant="462" id="0F6-ZA-CCi"/>
                             <constraint firstItem="0qx-0q-d9e" firstAttribute="top" secondItem="bYa-dC-9PF" secondAttribute="top" constant="388" id="C1f-X8-O0C"/>
                             <constraint firstItem="TKk-8v-PXB" firstAttribute="top" secondItem="bYa-dC-9PF" secondAttribute="top" constant="388" id="Y4r-c5-cxe"/>
                             <constraint firstItem="0qx-0q-d9e" firstAttribute="leading" secondItem="bYa-dC-9PF" secondAttribute="leading" constant="20" id="dh6-XO-q1R"/>
                             <constraint firstItem="bYa-dC-9PF" firstAttribute="trailing" secondItem="TKk-8v-PXB" secondAttribute="trailing" constant="20" id="qkE-5e-Z8J"/>
+                            <constraint firstItem="G8c-hn-sL8" firstAttribute="leading" secondItem="bYa-dC-9PF" secondAttribute="leading" constant="354" id="yJj-ct-uWT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bYa-dC-9PF"/>
                     </view>
                     <connections>
                         <outlet property="StartButton" destination="0qx-0q-d9e" id="WlV-Qg-vPl"/>
-                        <outlet property="dot1" destination="FEl-zX-H28" id="uie-XR-Pc6"/>
+                        <outlet property="button" destination="G8c-hn-sL8" id="jeF-oH-jFV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUE-1l-fnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3177" y="60"/>
+            <point key="canvasLocation" x="3176.5625" y="59.765624999999993"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ugX-Ww-siP">
