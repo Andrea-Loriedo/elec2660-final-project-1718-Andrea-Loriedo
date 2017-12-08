@@ -11,8 +11,10 @@
 @interface TrialViewController : UIViewController
 
 @property NSMutableArray *positions;
-@property (weak, nonatomic) IBOutlet UIButton *StartButton;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *dot;
+@property (weak, nonatomic) IBOutlet UIButton *finishButton;
+
 
 - (IBAction)button1Click:(UIButton *)sender;
 - (IBAction)startButtonPressed:(id)sender;

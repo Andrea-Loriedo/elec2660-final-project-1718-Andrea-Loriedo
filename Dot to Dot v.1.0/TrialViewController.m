@@ -23,12 +23,18 @@
 
 @synthesize positions = _positions;
 @synthesize dot = _dot;
+@synthesize startButton = _startButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    dot.hidden = YES; //Hide the dot until the first touch is detected
+    UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDrag:)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    
+    _finishButton.userInteractionEnabled = false;
+    _finishButton.hidden = YES;
+    _dot.hidden = YES; //Hide the dot until the first touch is detected
     buttonCount = 0; // So far the button has been clicked 0 times
     positions = [[NSMutableArray alloc]init]; //Initialisation of the values array
 
@@ -41,175 +47,74 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)handleDrag:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    CGPoint point = [gestureRecognizer locationInView:self.view];
+    UIView *draggedView = [self.view hitTest:point withEvent:nil];
+    
+    if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        if ([draggedView isKindOfClass:[UIButton class]] && !self.dot) {
+            self.dot = (UIButton *)draggedView;
+            NSLog(@"Button Drag Enter: %ld", (long)self.dot.tag);
+            
+            // send enter event to your button
+            [self.dot sendActionsForControlEvents:UIControlEventTouchDragEnter];
+            
+        }
+        
+        if (self.dot && ![self.dot isEqual:draggedView]) {
+            NSLog(@"Button Drag Exit: %ld", (long)self.dot.tag);
+            
+            // send exit event to your button
+            [self.dot sendActionsForControlEvents:UIControlEventTouchDragExit];
+            self.dot = nil;
+        }
+    } else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        self.dot = nil;
+    }
+}
+
 -(void)generateValuesArrayWithCoordiantes{
     
     // for every number between 0 and 20, create an nsdictionary with your desired values for x and y
-    CGPoint lastCoord = {0,0};
+    CGPoint lastCoord = {695,482};
     // you need to have your set of coordinates stored somewhere, so that they can put into the button values dictionary
-    for (int i = 0; i <= 40; i++) {
+    for (int i = 0; i <= 7; i++) {
         
         float xCoord = 0;
         float yCoord = 0;
         
-        if (i == 1){
-            xCoord = 681;
-            yCoord = 613;
+        if (i == 0){
+            xCoord = 695;
+            yCoord = 482;
+        }
+        else if (i == 1){
+            xCoord = 155;
+            yCoord = 681;
         }
         else if (i == 2){
-            xCoord = 190;
-            yCoord = 322;
+            xCoord = 446;
+            yCoord = 190;
         }
         else if (i == 3){
-            xCoord = 766;
-            yCoord = 322;
+            xCoord = 446;
+            yCoord = 766;
         }
         else if (i == 4){
-            xCoord = 283;
-            yCoord = 613;
+            xCoord = 155;
+            yCoord = 283;
         }
         else if (i == 5){
-            xCoord = 482;
-            yCoord = 73;
+            xCoord = 695;
+            yCoord = 482;
         }
         else if (i == 6){
-            xCoord = 681;
-            yCoord = 613;
+            xCoord = 155;
+            yCoord = 681;
         }
         else if (i == 7){
-            xCoord = 190;
-            yCoord = 322;
-        }
-        else if (i == 8){
-            xCoord = 766;
-            yCoord = 322;
-        }
-        else if (i == 9){
-            xCoord = 283;
-            yCoord = 613;
-        }
-        else if (i == 10){
-            xCoord = 482;
-            yCoord = 73;
-        }
-        else if (i == 11){
-            xCoord = 681;
-            yCoord = 613;
-        }
-        else if (i == 12){
-            xCoord= 190;
-            yCoord = 322;
-        }
-        else if (i == 13){
-            xCoord = 766;
-            yCoord = 322;
-        }
-        else if (i == 14){
-            xCoord = 283;
-            yCoord = 613;
-        }
-        else if (i == 15){
-            xCoord = 482;
-            yCoord = 73;
-        }
-        else if (i == 16){
-            xCoord = 681;
-            yCoord = 613;
-        }
-        else if (i == 17){
-            xCoord = 190;
-            yCoord = 322;
-        }
-        else if (i == 18){
-            xCoord = 766;
-            yCoord = 322;
-        }
-        else if (i == 19){
-            xCoord = 283;
-            yCoord = 613;
-        }
-        else if (i == 20){
-            xCoord = 482;
-            yCoord = 73;
-        }
-        else if (i == 21){
-            xCoord = 681;
-            yCoord = 613;
-        }
-        else if (i == 22){
-            xCoord = 190;
-            yCoord = 322;
-        }
-        else if (i == 23){
-            xCoord = 766;
-            yCoord = 322;
-        }
-        else if (i == 24){
-            xCoord = 283;
-            yCoord = 613;
-        }
-        else if (i == 25){
-            xCoord = 482;
-            yCoord = 73;
-        }
-        else if (i == 26){
-            xCoord = 681;
-            yCoord = 613;
-        }
-        else if (i == 27){
-            xCoord = 190;
-            yCoord = 322;
-        }
-        else if (i == 28){
-            xCoord = 766;
-            yCoord = 322;
-        }
-        else if (i == 29){
-            xCoord = 283;
-            yCoord = 613;
-        }
-        else if (i == 30){
-            xCoord = 482;
-            yCoord = 73;
-        }
-        else if (i == 31){
-            xCoord = 681;
-            yCoord = 613;
-        }
-        else if (i == 32){
-            xCoord = 190;
-            yCoord = 322;
-        }
-        else if (i == 33){
-            xCoord = 766;
-            yCoord = 322;
-        }
-        else if (i == 34){
-            xCoord = 283;
-            yCoord = 613;
-        }
-        else if (i == 35){
-            xCoord = 482;
-            yCoord = 73;
-        }
-        else if (i == 36){
-            xCoord = 681;
-            yCoord = 613;
-        }
-        else if (i == 37){
-            xCoord = 190;
-            xCoord = 322;
-        }
-        else if (i == 38){
-            xCoord = 766;
-            yCoord = 322;
-        }
-        else if (i == 39){
-            xCoord = 283;
-            yCoord = 613;
-        }
-        else if (i == 40){
-            xCoord = 482;
-            yCoord = 73;
+            xCoord = 446;
+            yCoord = 190;
         }
         
         NSMutableDictionary *dotPositions = [[NSMutableDictionary alloc]init];
@@ -227,13 +132,6 @@
         lastCoord = CGPointMake(xCoord, yCoord);
         [positions addObject:dotPositions];
     }
-}
-
-#pragma mark Gesture Tracking Delegate Methods
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    // unhide the button
-    dot.hidden = NO;
 }
 
 #pragma mark Gesture Tracking Data Source Methods
@@ -264,11 +162,43 @@
 
 
 - (IBAction)button1Click:(UIButton *)sender {
+    if (!hasStarted) {
+        NSLog(@"It Has Begun");
+        hasStarted = true;
+    }
+    buttonCount = buttonCount + 1;
+    
+    NSLog(@"Dot n: %li", buttonCount);
+    
+    if (buttonCount == 7){
+        // The button has been clicked 40 times, compare the minDistance of the dictionaries, to the actualDistance of the dictionaries
+        _finishButton.hidden = NO;
+        _finishButton.userInteractionEnabled = YES;
+        NSLog(@"We are done");
+        return;
+    }
+    //get the last frame of the button
+    CGRect lastFrame = sender.frame;
+    
+    NSMutableDictionary *nextButtonValues = [positions objectAtIndex:buttonCount];
+    
+    CGRect nextFrame = CGRectMake([[nextButtonValues valueForKey:@"x"]floatValue], [[nextButtonValues valueForKey:@"y"]floatValue], lastFrame.size.width, lastFrame.size.height);
+    
+    // disable user interaction so you don't get undesired clicks
+    sender.userInteractionEnabled = NO;
+    
+    //Animate the button move to the next location
+    [UIView animateWithDuration:0.1 animations:^{
+        [sender setFrame:nextFrame];
+        // Enable it again
+        sender.userInteractionEnabled = YES;
+    }];
 }
 
-- (IBAction)startButtonPressed:(id)sender {
-    dot.hidden = NO;
+- (IBAction)startButtonPressed:(UIButton *)sender {
+    _dot.hidden = NO;
+    _startButton.hidden = YES;
+    sender.userInteractionEnabled = NO;
 }
-
 
 @end

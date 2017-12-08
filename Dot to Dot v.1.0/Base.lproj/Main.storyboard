@@ -330,7 +330,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8c-hn-sL8">
-                                <rect key="frame" x="354" y="482" width="60" height="60"/>
+                                <rect key="frame" x="695" y="482" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="MVG-hd-xTi"/>
                                     <constraint firstAttribute="width" constant="60" id="uXD-6z-BmP"/>
@@ -343,18 +343,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99338012933731079" green="0.94684535264968872" blue="0.79886037111282349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="G8c-hn-sL8" firstAttribute="top" secondItem="bYa-dC-9PF" secondAttribute="top" constant="462" id="0F6-ZA-CCi"/>
                             <constraint firstItem="0qx-0q-d9e" firstAttribute="top" secondItem="bYa-dC-9PF" secondAttribute="top" constant="388" id="C1f-X8-O0C"/>
+                            <constraint firstItem="G8c-hn-sL8" firstAttribute="leading" secondItem="bYa-dC-9PF" secondAttribute="leading" constant="695" id="EtH-Br-5NM"/>
                             <constraint firstItem="TKk-8v-PXB" firstAttribute="top" secondItem="bYa-dC-9PF" secondAttribute="top" constant="388" id="Y4r-c5-cxe"/>
                             <constraint firstItem="0qx-0q-d9e" firstAttribute="leading" secondItem="bYa-dC-9PF" secondAttribute="leading" constant="20" id="dh6-XO-q1R"/>
+                            <constraint firstItem="G8c-hn-sL8" firstAttribute="top" secondItem="bYa-dC-9PF" secondAttribute="top" constant="462" id="k6U-ki-0Hr"/>
                             <constraint firstItem="bYa-dC-9PF" firstAttribute="trailing" secondItem="TKk-8v-PXB" secondAttribute="trailing" constant="20" id="qkE-5e-Z8J"/>
-                            <constraint firstItem="G8c-hn-sL8" firstAttribute="leading" secondItem="bYa-dC-9PF" secondAttribute="leading" constant="354" id="yJj-ct-uWT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bYa-dC-9PF"/>
                     </view>
                     <connections>
-                        <outlet property="StartButton" destination="0qx-0q-d9e" id="WlV-Qg-vPl"/>
-                        <outlet property="button" destination="G8c-hn-sL8" id="jeF-oH-jFV"/>
+                        <outlet property="dot" destination="G8c-hn-sL8" id="gY2-e2-hvI"/>
+                        <outlet property="finishButton" destination="TKk-8v-PXB" id="Dh0-xr-2P0"/>
+                        <outlet property="startButton" destination="0qx-0q-d9e" id="Gce-QP-9zo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUE-1l-fnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
