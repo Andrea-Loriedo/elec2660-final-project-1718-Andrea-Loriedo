@@ -79,7 +79,7 @@
     // for every number between 0 and 20, create an nsdictionary with your desired values for x and y
     CGPoint lastCoord = {695,482};
     // you need to have your set of coordinates stored somewhere, so that they can put into the button values dictionary
-    for (int i = 0; i <= 7; i++) {
+    for (int i = 0; i <= 8; i++) {
         
         float xCoord = 0;
         float yCoord = 0;
@@ -116,6 +116,11 @@
             xCoord = 446;
             yCoord = 190;
         }
+        else if (i == 8){
+            xCoord = 446;
+            yCoord = 766;
+        }
+
         
         NSMutableDictionary *dotPositions = [[NSMutableDictionary alloc]init];
         // add the x and y values to the dictionary
@@ -170,7 +175,7 @@
     
     NSLog(@"Dot n: %li", buttonCount);
     
-    if (buttonCount == 7){
+    if (buttonCount == 8){
         // The button has been clicked 40 times, compare the minDistance of the dictionaries, to the actualDistance of the dictionaries
         _finishButton.hidden = NO;
         _finishButton.userInteractionEnabled = YES;
