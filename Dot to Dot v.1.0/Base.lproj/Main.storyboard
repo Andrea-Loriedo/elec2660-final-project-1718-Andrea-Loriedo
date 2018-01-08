@@ -199,20 +199,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date Picker Square (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="44J-eB-Ogf">
-                                <rect key="frame" x="170" y="665" width="438" height="216"/>
+                                <rect key="frame" x="170" y="665" width="428" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="408" id="ejt-OD-7O3"/>
                                     <constraint firstAttribute="height" constant="216" id="vJn-uq-vm4"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-L6-SIF">
-                                <rect key="frame" x="229" y="665" width="320" height="216"/>
+                                <rect key="frame" x="224" y="665" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="532791608.68567401">
                                     <!--2017-11-19 13:40:08 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-4p-Y7a">
-                                <rect key="frame" x="263" y="924" width="253" height="64"/>
+                                <rect key="frame" x="263" y="924" width="243" height="64"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="35"/>
                                 <state key="normal" title="Test motor skills">
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter personal information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-xd-Ryd">
-                                <rect key="frame" x="165" y="366" width="448.5" height="44.5"/>
+                                <rect key="frame" x="176" y="366" width="416" height="55.5"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -378,6 +378,9 @@
                                 <rect key="frame" x="240" y="319" width="121" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="View data.png"/>
+                                <connections>
+                                    <segue destination="cFz-hM-bGg" kind="show" id="7Yi-Fn-Xxm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wra-GW-pAK">
                                 <rect key="frame" x="52" y="321" width="121" height="383"/>
@@ -394,6 +397,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWB-Pp-mXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4406.25" y="59.765624999999993"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fWS-Pg-vZw">
+            <objects>
+                <navigationController id="cFz-hM-bGg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YZB-n5-GPx">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Lj-ym-Eyr" kind="relationship" relationship="rootViewController" id="dQD-CS-hMN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7J-LQ-Lqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5144" y="61"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="uaL-rh-Xfv">
+            <objects>
+                <tableViewController id="6Lj-ym-Eyr" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TgH-o4-lWw">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hZi-um-rSv">
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZi-um-rSv" id="fTu-sA-gSW">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CSY-BX-hH2" kind="show" id="DkD-Gv-lY0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6Lj-ym-Eyr" id="c4y-Cc-PlQ"/>
+                            <outlet property="delegate" destination="6Lj-ym-Eyr" id="wsV-K9-KwB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Gb6-n8-H9y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDq-em-cwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5929" y="60"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WQx-8l-KFX">
+            <objects>
+                <viewController id="CSY-BX-hH2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vO-3q-Yqk">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wIF-lk-ker"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RbX-D2-IOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6721" y="60"/>
         </scene>
     </scenes>
     <resources>
