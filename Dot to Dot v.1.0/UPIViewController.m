@@ -27,7 +27,7 @@
 }
 
 - (IBAction)backgroundPressed:(id)sender { //hides the keyboard when the background is pressed
-    if([self.nameTextField isFirstResponder]){
+    if([self.nameTextField isFirstResponder]){ //Switch first responder in order to hide the keyboard if the text field is the original first responder (repeat for each text field)
        [self.nameTextField resignFirstResponder];
     }
     if([self.surnameTextField isFirstResponder]){

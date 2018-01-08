@@ -16,9 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [NSThread sleepForTimeInterval:4];
+    [NSThread sleepForTimeInterval:4]; //Waits 4s before the transition between LanchScreen and MainStoryboard
     [application isStatusBarHidden];
-    return YES;
+    return YES; //Hides the status bar at the top of the device screen
 }
 
 

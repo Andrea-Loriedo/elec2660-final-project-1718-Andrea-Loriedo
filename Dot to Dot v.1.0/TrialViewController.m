@@ -10,10 +10,10 @@
 
 @interface TrialViewController (){
     
-    NSMutableArray *positions; // Array containing NSDictionary with coordinates for each button the user will navigate to
+    NSMutableArray *positions; // Array containing NSDictionary with coordinates for each position of the button the user will move to
     NSInteger buttonCount; // Counts how many times the dot has been pressed
     __weak IBOutlet UIButton *dot; //dot object is of type UIButton
-    BOOL hasStarted;
+    BOOL TrialHasStarted; //TRUE when the first dot is reached by the user / otherwise FALSE
     
 }
 
@@ -47,6 +47,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+//I couldn't quite figure out how to get the "touch drag enter" gesture to work properly, but this method found on stackoverflow.com helped.
+//Complete reference: https://stackoverflow.com/questions/31916979/how-touch-drag-enter-works/31918268
+
 - (void)handleDrag:(UIPanGestureRecognizer *)gestureRecognizer
 {
     CGPoint point = [gestureRecognizer locationInView:self.view];
@@ -79,7 +82,7 @@
     // for every number between 0 and 20, create an nsdictionary with your desired values for x and y
     CGPoint lastCoord = {695,482};
     // you need to have your set of coordinates stored somewhere, so that they can put into the button values dictionary
-    for (int i = 0; i <= 8; i++) {
+    for (int i = 0; i <= 9; i++) {
         
         float xCoord = 0;
         float yCoord = 0;
@@ -141,19 +144,33 @@
 
 #pragma mark Gesture Tracking Data Source Methods
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    dot.hidden = NO;
+}
+
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    if (hasStarted) {
-        // only necessary if the game has begun
-        // get this and last touch location and the distance moved between them
-        UITouch *touch = [touches anyObject];
-        CGPoint touchLocation = [touch locationInView:self.view];
-        CGPoint lastLocation = [touch previousLocationInView:self.view];
-        CGFloat distanceMoved = [self distanceBetween:touchLocation and:lastLocation];
+    // get this and last touch location and the distance moved between them
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInView:self.view];
+    CGPoint lastLocation = [touch previousLocationInView:self.view];
+    CGFloat distanceMoved = [self distanceBetween:touchLocation and:lastLocation];
+    
+    NSLog(@"MOVED %.2f", distanceMoved);
+    
+    // get the current course from values, and update the distanceTravelled to include the distance moved
+    NSMutableDictionary *currentCourse = [positions objectAtIndex:buttonCount];
+    CGFloat courseTravelled = [[currentCourse valueForKey:@"distanceTravelled"]floatValue];
+    [currentCourse setValue:[NSNumber numberWithFloat:courseTravelled + distanceMoved] forKey:@"distanceTravelled"];
+    
+    // detect if the touch is inside the button frame
+    for (UITouch *t in touches) {
+        CGPoint touchPoint = [t locationInView:self.view];
         
-        // get the current course from values, and update the distanceTravelled to include the distance moved
-        NSMutableDictionary *currentCourse = [positions objectAtIndex:buttonCount];
-        CGFloat courseTravelled = [[currentCourse valueForKey:@"distanceTravelled"]floatValue];
-        [currentCourse setValue:[NSNumber numberWithFloat:courseTravelled + distanceMoved] forKey:@"distanceTravelled"];
+        CGPoint testPoint = [self.view convertPoint:touchPoint toView:dot];
+        if ([dot pointInside:testPoint withEvent:event]) {
+            [self DotDragEnter:dot];
+            return;
+        }
     }
 }
 
@@ -166,17 +183,19 @@
 }
 
 
-- (IBAction)button1Click:(UIButton *)sender {
-    if (!hasStarted) {
+- (IBAction)DotDragEnter:(UIButton *)sender {
+    if (!TrialHasStarted) { //Not operator - evaluates to false
         NSLog(@"It Has Begun");
-        hasStarted = true;
+        TrialHasStarted = true;
     }
     buttonCount = buttonCount + 1;
     
     NSLog(@"Dot n: %li", buttonCount);
     
-    if (buttonCount == 8){
+    if (buttonCount == 9){
         // The button has been clicked 40 times, compare the minDistance of the dictionaries, to the actualDistance of the dictionaries
+
+        _dot.hidden = YES; //Also solves a crash issue
         _finishButton.hidden = NO;
         _finishButton.userInteractionEnabled = YES;
         NSLog(@"We are done");
@@ -199,6 +218,7 @@
         sender.userInteractionEnabled = YES;
     }];
 }
+
 
 - (IBAction)startButtonPressed:(UIButton *)sender {
     _dot.hidden = NO;

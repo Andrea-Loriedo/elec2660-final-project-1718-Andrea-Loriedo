@@ -11,12 +11,12 @@
 @interface TrialViewController : UIViewController
 
 @property NSMutableArray *positions;
-@property (weak, nonatomic) IBOutlet UIButton *startButton;
-@property (weak, nonatomic) IBOutlet UIButton *dot;
-@property (weak, nonatomic) IBOutlet UIButton *finishButton;
+@property (weak, nonatomic) IBOutlet UIButton *startButton; //Start button (a button using a custom image)
+@property (weak, nonatomic) IBOutlet UIButton *dot; //Green dot sprite (a button using a custom image)
+@property (weak, nonatomic) IBOutlet UIButton *finishButton; //Finish button (a button using a custom image)
 
-
-- (IBAction)button1Click:(UIButton *)sender;
-- (IBAction)startButtonPressed:(id)sender;
+- (IBAction)DotDragEnter:(UIButton *)sender;
+//Method triggered when the dot is clicked
+- (IBAction)startButtonPressed:(id)sender; //Method triggered as soon as the start button is pressed
 
 @end

@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.instructionsImages.image = [UIImage imageNamed: self.storeImage]; //Sets the images stored in the 'storeImage' property as the images to be displayed in the Image View
+    self.instructionsImages.image = [UIImage imageNamed: self.storeImage]; //Sets the images stored in the 'storeImage' property as the set of images to be displayed in the Image View as soon as the view loads. Here the image names are passed to the instructionsImages.image object.
 }
 
 - (void)didReceiveMemoryWarning {

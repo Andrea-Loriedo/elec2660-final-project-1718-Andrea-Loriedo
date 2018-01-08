@@ -337,7 +337,7 @@
                                 </constraints>
                                 <state key="normal" image="DotSprite.png"/>
                                 <connections>
-                                    <action selector="button1Click:" destination="3NK-6E-36a" eventType="touchDragEnter" id="4Qe-Sg-8Fa"/>
+                                    <action selector="DotDragEnter:" destination="3NK-6E-36a" eventType="touchDragEnter" id="4hh-nW-2aB"/>
                                 </connections>
                             </button>
                         </subviews>
