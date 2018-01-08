@@ -199,20 +199,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date Picker Square (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="44J-eB-Ogf">
-                                <rect key="frame" x="170" y="665" width="428" height="216"/>
+                                <rect key="frame" x="170" y="665" width="438" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="408" id="ejt-OD-7O3"/>
                                     <constraint firstAttribute="height" constant="216" id="vJn-uq-vm4"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-L6-SIF">
-                                <rect key="frame" x="224" y="665" width="320" height="216"/>
+                                <rect key="frame" x="229" y="665" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="532791608.68567401">
                                     <!--2017-11-19 13:40:08 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-4p-Y7a">
-                                <rect key="frame" x="263" y="924" width="243" height="64"/>
+                                <rect key="frame" x="263" y="924" width="253" height="64"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="35"/>
                                 <state key="normal" title="Test motor skills">
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter personal information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-xd-Ryd">
-                                <rect key="frame" x="176" y="366" width="416" height="55.5"/>
+                                <rect key="frame" x="165" y="366" width="448.5" height="44.5"/>
                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -244,6 +244,26 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="Ou0-Tc-W1M"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK5-3z-csD">
+                                <rect key="frame" x="69" y="941" width="113" height="30"/>
+                                <state key="normal" title="Save new profile"/>
+                                <connections>
+                                    <action selector="saveNewProfile:" destination="NFC-Sv-8bH" eventType="touchUpInside" id="SgU-Uw-8uV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGf-La-0Nn">
+                                <rect key="frame" x="628" y="941" width="81" height="30"/>
+                                <state key="normal" title="Load profile"/>
+                                <connections>
+                                    <action selector="loadProfile:" destination="NFC-Sv-8bH" eventType="touchUpInside" id="kEg-FR-b4U"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uW-Zl-dyn">
+                                <rect key="frame" x="389" y="564" width="310" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -251,11 +271,13 @@
                             <constraint firstItem="Iyg-ox-usa" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="583" id="1xc-d8-4bS"/>
                             <constraint firstItem="2SL-4p-Y7a" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="904" id="7H3-Fd-oF4"/>
                             <constraint firstItem="Ji8-jq-OKS" firstAttribute="top" secondItem="GJj-GO-DPF" secondAttribute="bottom" constant="21" id="8WL-gN-D5d"/>
+                            <constraint firstItem="XK5-3z-csD" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="69" id="B0s-qE-Tw0"/>
                             <constraint firstItem="hyX-WS-zUb" firstAttribute="trailing" secondItem="2SL-4p-Y7a" secondAttribute="trailing" constant="262" id="CPn-jH-b6Q"/>
                             <constraint firstItem="7wo-lT-1Nw" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="430" id="Elo-Oj-Vly"/>
                             <constraint firstItem="7wo-lT-1Nw" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="72" id="EmQ-wj-ECY"/>
                             <constraint firstItem="Iyg-ox-usa" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="36" id="GyG-Ka-keW"/>
                             <constraint firstItem="0h4-L6-SIF" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="645" id="Iww-wU-tHc"/>
+                            <constraint firstItem="2uW-Zl-dyn" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="544" id="KAT-fJ-At3"/>
                             <constraint firstItem="UBR-EN-xDM" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="591" id="P0k-K3-41L"/>
                             <constraint firstItem="kxe-Z1-Nfa" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="104" id="PUT-gM-cRl"/>
                             <constraint firstItem="44J-eB-Ogf" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="170" id="UIA-kM-mbE"/>
@@ -268,6 +290,9 @@
                             <constraint firstItem="02R-Vr-v8v" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="20" id="eAe-A6-ZgE"/>
                             <constraint firstItem="GJj-GO-DPF" firstAttribute="height" secondItem="Ji8-jq-OKS" secondAttribute="height" id="edH-Pf-V4U"/>
                             <constraint firstItem="Qzf-xd-Ryd" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="346" id="f6k-kv-Qgk"/>
+                            <constraint firstItem="hyX-WS-zUb" firstAttribute="trailing" secondItem="cGf-La-0Nn" secondAttribute="trailing" constant="69" id="gbl-fN-Fpt"/>
+                            <constraint firstItem="hyX-WS-zUb" firstAttribute="bottom" secondItem="cGf-La-0Nn" secondAttribute="bottom" constant="53" id="gcz-uA-Uub"/>
+                            <constraint firstItem="2uW-Zl-dyn" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="389" id="hg1-3I-O6Y"/>
                             <constraint firstItem="hyX-WS-zUb" firstAttribute="trailing" secondItem="2SL-4p-Y7a" secondAttribute="trailing" constant="262" id="ihq-hT-ggH"/>
                             <constraint firstItem="GMW-GS-6z2" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="42" id="jBd-xp-ukU"/>
                             <constraint firstItem="2SL-4p-Y7a" firstAttribute="leading" secondItem="hyX-WS-zUb" secondAttribute="leading" constant="263" id="jb9-jC-aA4"/>
@@ -281,6 +306,7 @@
                             <constraint firstItem="hyX-WS-zUb" firstAttribute="trailing" secondItem="44J-eB-Ogf" secondAttribute="trailing" constant="170" id="uEK-wa-iyX"/>
                             <constraint firstItem="kkC-ix-rg3" firstAttribute="top" secondItem="Ji8-jq-OKS" secondAttribute="bottom" constant="21" id="uas-hn-3OO"/>
                             <constraint firstItem="GJj-GO-DPF" firstAttribute="width" secondItem="Ji8-jq-OKS" secondAttribute="width" id="v8m-YV-IUH"/>
+                            <constraint firstItem="hyX-WS-zUb" firstAttribute="bottom" secondItem="XK5-3z-csD" secondAttribute="bottom" constant="53" id="vfb-yM-Lny"/>
                             <constraint firstItem="kxe-Z1-Nfa" firstAttribute="top" secondItem="hyX-WS-zUb" secondAttribute="top" constant="531" id="wul-8b-Tn6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hyX-WS-zUb"/>
@@ -289,15 +315,16 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="ageTextField" destination="kkC-ix-rg3" id="BAg-Qn-dKd"/>
-                        <outlet property="idCodeTextField" destination="UBR-EN-xDM" id="pXR-7Q-urQ"/>
-                        <outlet property="nameTextField" destination="GJj-GO-DPF" id="0j5-tN-DbN"/>
-                        <outlet property="surnameTextField" destination="Ji8-jq-OKS" id="Ycs-xw-V4x"/>
+                        <outlet property="IDCode" destination="UBR-EN-xDM" id="U2V-Yd-sib"/>
+                        <outlet property="age" destination="kkC-ix-rg3" id="AYi-Rd-1u8"/>
+                        <outlet property="name" destination="GJj-GO-DPF" id="NKF-lg-miX"/>
+                        <outlet property="status" destination="2uW-Zl-dyn" id="QCx-yv-DJd"/>
+                        <outlet property="surname" destination="Ji8-jq-OKS" id="VHE-3U-VT8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FS-jZ-YLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="1636"/>
+            <point key="canvasLocation" x="1913.28125" y="1635.9375"/>
         </scene>
         <!--Trial View Controller-->
         <scene sceneID="Hxj-76-1h2">
@@ -479,6 +506,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aes-Qn-gP3"/>
-        <segue reference="fPO-oc-vve"/>
+        <segue reference="Ou0-Tc-W1M"/>
     </inferredMetricsTieBreakers>
 </document>

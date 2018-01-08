@@ -7,13 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
-@interface UPIViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField; //UITextField for the user to enter his name
-@property (weak, nonatomic) IBOutlet UITextField *surnameTextField; //UITextField for the user to enter his surname
-@property (weak, nonatomic) IBOutlet UITextField *ageTextField; //UITextField for the user to enter his age
-@property (weak, nonatomic) IBOutlet UITextField *idCodeTextField; //UITextField for the user/researcher to enter the ID Code
+//Some basic SQL skills were learnt thanks to this techotopia.com page: http://www.techotopia.com/index.php/IOS_4_iPhone_Database_Implementation_using_SQLite#What_is_SQLite.3F
 
+@interface UPIViewController : UIViewController {
+    UITextField *name;
+    UITextField *surname;
+    UITextField *IDCode;
+    UITextField *age;
+    UILabel *status;
+    NSString *databasePath;
+    
+    sqlite3 *userDataBase;
+}
+
+
+@property (retain, nonatomic) IBOutlet UITextField *name; //UITextField for the user to enter his name
+@property (retain, nonatomic) IBOutlet UITextField *surname; //UITextField for the user to enter his surname
+@property (retain, nonatomic) IBOutlet UITextField *age; //UITextField for the user to enter his age
+@property (retain, nonatomic) IBOutlet UITextField *IDCode; //UITextField for the user/researcher to enter the ID Code
+@property (retain, nonatomic) IBOutlet UILabel *status;
+
+
+- (IBAction)saveNewProfile:(id)sender;
+- (IBAction)loadProfile:(id)sender;
 
 
 - (IBAction)backgroundPressed:(id)sender; //Method that triggers and action when the view background is pressed
