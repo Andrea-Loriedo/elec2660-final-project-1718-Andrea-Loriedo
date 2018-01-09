@@ -14,8 +14,9 @@
 @interface UPIViewController : UIViewController {
     UITextField *name;
     UITextField *surname;
-    UITextField *IDCode;
     UITextField *age;
+    UITextField *IDCode;
+    UIDatePicker *date;
     UILabel *status;
     NSString *databasePath;
     
@@ -27,7 +28,10 @@
 @property (retain, nonatomic) IBOutlet UITextField *surname; //UITextField for the user to enter his surname
 @property (retain, nonatomic) IBOutlet UITextField *age; //UITextField for the user to enter his age
 @property (retain, nonatomic) IBOutlet UITextField *IDCode; //UITextField for the user/researcher to enter the ID Code
+- (IBAction)date:(id)sender;
+
 @property (retain, nonatomic) IBOutlet UILabel *status;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 
 - (IBAction)saveNewProfile:(id)sender;

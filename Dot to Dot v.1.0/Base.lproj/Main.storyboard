@@ -210,6 +210,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="532791608.68567401">
                                     <!--2017-11-19 13:40:08 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="date:" destination="NFC-Sv-8bH" eventType="valueChanged" id="uDY-yZ-VdW"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-4p-Y7a">
                                 <rect key="frame" x="263" y="924" width="253" height="64"/>
@@ -317,6 +320,7 @@
                     <connections>
                         <outlet property="IDCode" destination="UBR-EN-xDM" id="U2V-Yd-sib"/>
                         <outlet property="age" destination="kkC-ix-rg3" id="AYi-Rd-1u8"/>
+                        <outlet property="datePicker" destination="0h4-L6-SIF" id="8TA-77-BCH"/>
                         <outlet property="name" destination="GJj-GO-DPF" id="NKF-lg-miX"/>
                         <outlet property="status" destination="2uW-Zl-dyn" id="QCx-yv-DJd"/>
                         <outlet property="surname" destination="Ji8-jq-OKS" id="VHE-3U-VT8"/>
