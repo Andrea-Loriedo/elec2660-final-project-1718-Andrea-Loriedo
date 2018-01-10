@@ -13,7 +13,7 @@
 @end
 
 @implementation UPIViewController
-@synthesize name, surname, age, IDCode, status;
+@synthesize name, surname, age, IDCode, status; //Synthesizing these instance variables tells the compiler to automaticaly generate accessor methods for them
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -85,7 +85,7 @@
         sqlite3_prepare_v2(userDataBase, insert_stmt, -1, &statement, NULL);
         if (sqlite3_step(statement) == SQLITE_DONE)
         {
-            status.text = @"New user added";
+            status.text = @"New user added successfully";
             
         } else {
             status.text = @"Failed to add user";
@@ -113,7 +113,7 @@
             if (sqlite3_step(statement) == SQLITE_ROW)
             {
                 
-                status.text = @"User profile found"; //If a SQLITE_ROW result is returned, the status label displays this message
+                status.text = @"Existing user profile found!"; //If a SQLITE_ROW result is returned, the status label displays this message
                 
                 //If a SQLITE_ROW result is returned, the name, surname and age text fields will display the user details corresponding to the input IDCode
                 
@@ -157,8 +157,7 @@
     }
 }
 - (IBAction)date:(id)sender {
-   // NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-   // [formatter setDateFormat:@"dd/mm/yy"];
+
     NSDate *chosenDate = [self.datePicker date];
     NSLog(@"%@", [NSString stringWithFormat: @"%@", chosenDate]);
    

@@ -10,20 +10,15 @@
 
 @interface TrialViewController (){
     
-    NSMutableArray *positions; // Array containing NSDictionary with coordinates for each position of the button the user will move to
     NSInteger buttonCount; // Counts how many times the dot has been pressed
-    __weak IBOutlet UIButton *dot; //dot object is of type UIButton
     BOOL TrialHasStarted; //TRUE when the first dot is reached by the user / otherwise FALSE
-    
 }
 
 @end
 
 @implementation TrialViewController
 
-@synthesize positions = _positions;
-@synthesize dot = _dot;
-@synthesize startButton = _startButton;
+@synthesize positions, dot; //Synthesizing these instance variables tells the compiler to automaticaly generate accessor methods for them
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,9 +27,9 @@
     UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDrag:)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
-    _finishButton.userInteractionEnabled = false;
-    _finishButton.hidden = YES;
-    _dot.hidden = YES; //Hide the dot until the first touch is detected
+    self.finishButton.userInteractionEnabled = false;
+    self.finishButton.hidden = YES;
+    dot.hidden = YES; //Hide the dot until the first touch is detected
     buttonCount = 0; // So far the button has been clicked 0 times
     positions = [[NSMutableArray alloc]init]; //Initialisation of the values array
 
@@ -195,9 +190,9 @@
     if (buttonCount == 9){
         // The button has been clicked 40 times, compare the minDistance of the dictionaries, to the actualDistance of the dictionaries
 
-        _dot.hidden = YES; //Also solves a crash issue
-        _finishButton.hidden = NO;
-        _finishButton.userInteractionEnabled = YES;
+        dot.hidden = YES; //Also solves a crash issue
+        self.finishButton.hidden = NO;
+        self.finishButton.userInteractionEnabled = YES;
         NSLog(@"We are done");
         return;
     }
@@ -221,9 +216,9 @@
 
 
 - (IBAction)startButtonPressed:(UIButton *)sender {
-    _dot.hidden = NO;
-    _startButton.hidden = YES;
-    sender.userInteractionEnabled = NO;
+    dot.hidden = NO; //The first dot is revealed as the "start" button is pressed
+    self.startButton.hidden = YES; //As soon as it's pressed, the start button desappears
+    sender.userInteractionEnabled = NO; //User interaction with the "start" button is disabled so as to avoid accidental clicks
 }
 
 @end

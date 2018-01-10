@@ -12,10 +12,12 @@
 		651417C21FC1F52C00030A4C /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651417C11FC1F52C00030A4C /* InstructionsViewController.m */; };
 		652D19CC2003EE3200FA9883 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D19CB2003EE3100FA9883 /* TableViewController.m */; };
 		652D19CE2003FFBF00FA9883 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 652D19CD2003FEF300FA9883 /* libsqlite3.tbd */; };
+		652D19DC2006472900FA9883 /* Save new profile button.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D19DA2006472200FA9883 /* Save new profile button.png */; };
+		652D19DD2006472900FA9883 /* Load profile button.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D19DB2006472600FA9883 /* Load profile button.png */; };
+		652D19DF2006482200FA9883 /* Back button.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D19DE2006481D00FA9883 /* Back button.png */; };
 		656A33E21FD159E8003FE35E /* TrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A33E11FD159E8003FE35E /* TrialViewController.m */; };
 		656A33E61FD16BBB003FE35E /* Start trial Button red.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E51FD16BBB003FE35E /* Start trial Button red.png */; };
 		656A33E81FD1809C003FE35E /* Back to main menu button.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E71FD1809C003FE35E /* Back to main menu button.png */; };
-		656A33EA1FD191F9003FE35E /* Back button.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E91FD191F9003FE35E /* Back button.png */; };
 		656A33EC1FD1B068003FE35E /* StartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33EB1FD1B067003FE35E /* StartButton.png */; };
 		656A33EE1FD1B071003FE35E /* FinishButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33ED1FD1B070003FE35E /* FinishButton.png */; };
 		656A33F81FD3F848003FE35E /* Well done background.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33F71FD3F846003FE35E /* Well done background.png */; };
@@ -62,11 +64,13 @@
 		652D19CA2003EE3100FA9883 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		652D19CB2003EE3100FA9883 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		652D19CD2003FEF300FA9883 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		652D19DA2006472200FA9883 /* Save new profile button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Save new profile button.png"; sourceTree = "<group>"; };
+		652D19DB2006472600FA9883 /* Load profile button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Load profile button.png"; sourceTree = "<group>"; };
+		652D19DE2006481D00FA9883 /* Back button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back button.png"; sourceTree = "<group>"; };
 		656A33E01FD159E8003FE35E /* TrialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrialViewController.h; sourceTree = "<group>"; };
 		656A33E11FD159E8003FE35E /* TrialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrialViewController.m; sourceTree = "<group>"; };
 		656A33E51FD16BBB003FE35E /* Start trial Button red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start trial Button red.png"; sourceTree = "<group>"; };
 		656A33E71FD1809C003FE35E /* Back to main menu button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back to main menu button.png"; sourceTree = "<group>"; };
-		656A33E91FD191F9003FE35E /* Back button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back button.png"; sourceTree = "<group>"; };
 		656A33EB1FD1B067003FE35E /* StartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartButton.png; sourceTree = "<group>"; };
 		656A33ED1FD1B070003FE35E /* FinishButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FinishButton.png; sourceTree = "<group>"; };
 		656A33F71FD3F846003FE35E /* Well done background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Well done background.png"; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 		65AF64851FC0E8F7009D6315 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				652D19DB2006472600FA9883 /* Load profile button.png */,
+				652D19DA2006472200FA9883 /* Save new profile button.png */,
 				656A34051FD43DCF003FE35E /* DotSprite.png */,
 				656A33F71FD3F846003FE35E /* Well done background.png */,
 				656A33EB1FD1B067003FE35E /* StartButton.png */,
@@ -216,10 +222,10 @@
 				656A34011FD40CFF003FE35E /* Go back.png */,
 				656A34021FD40CFF003FE35E /* View data.png */,
 				657BA7561FC3613300B11C4B /* Date Picker Square (1).png */,
+				652D19DE2006481D00FA9883 /* Back button.png */,
 				65AF64811FC0E782009D6315 /* DotToDot logo.png */,
 				657BA7541FC3507700B11C4B /* UPI Background1.2.png */,
 				656A33E51FD16BBB003FE35E /* Start trial Button red.png */,
-				656A33E91FD191F9003FE35E /* Back button.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -340,12 +346,14 @@
 				65AF645C1FC0E240009D6315 /* LaunchScreen.storyboard in Resources */,
 				656A33EC1FD1B068003FE35E /* StartButton.png in Resources */,
 				657BA7571FC3613300B11C4B /* Date Picker Square (1).png in Resources */,
-				656A33EA1FD191F9003FE35E /* Back button.png in Resources */,
+				652D19DF2006482200FA9883 /* Back button.png in Resources */,
 				656A33E81FD1809C003FE35E /* Back to main menu button.png in Resources */,
 				65AF64591FC0E240009D6315 /* Assets.xcassets in Resources */,
 				65AF64821FC0E783009D6315 /* DotToDot logo.png in Resources */,
+				652D19DC2006472900FA9883 /* Save new profile button.png in Resources */,
 				65AF64571FC0E240009D6315 /* Main.storyboard in Resources */,
 				656A33E61FD16BBB003FE35E /* Start trial Button red.png in Resources */,
+				652D19DD2006472900FA9883 /* Load profile button.png in Resources */,
 				656A34041FD40D00003FE35E /* View data.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
