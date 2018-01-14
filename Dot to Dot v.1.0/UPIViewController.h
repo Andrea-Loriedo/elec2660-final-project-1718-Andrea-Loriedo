@@ -14,6 +14,7 @@
 @interface UPIViewController : UIViewController {
     //These are instance variables, != properties, although the properties below have the same name
     //They hold information about the various attributes of an object (in this case the user profile)
+    //Their names are self-explanatory
     UITextField *name;
     UITextField *surname;
     UITextField *age;
@@ -30,10 +31,10 @@
 @property (retain, nonatomic) IBOutlet UITextField *surname; //UITextField for the user to enter his surname
 @property (retain, nonatomic) IBOutlet UITextField *age; //UITextField for the user to enter his age
 @property (retain, nonatomic) IBOutlet UITextField *IDCode; //UITextField for the user/researcher to enter the ID Code
-- (IBAction)date:(id)sender;
+- (IBAction)date:(id)sender; //Date selection action (using a date picker)
 
-@property (retain, nonatomic) IBOutlet UILabel *status; //A label indicating when a new profile has been created (or not) and when a profile has been loaded (or not)
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker; //A picker view allowing the user to select the current date and time
+@property (retain, nonatomic) IBOutlet UILabel *status; //A label indicating when a new profile has been created (or not) and when a profile has been loaded (or not). It also indicates if there has been a problem with creating/opening the users database
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker; //A picker view allowing the user to select the current date and time (property)
 
 
 - (IBAction)saveNewProfile:(id)sender; //A method that saves new user profile details in the users table in our SQL database

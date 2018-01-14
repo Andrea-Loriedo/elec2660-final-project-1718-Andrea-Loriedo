@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UsersDataModel.h"
+#import "ResultsViewController.h"
 
 @interface TableViewController : UITableViewController
+
+@property (strong, nonatomic) UsersDataModel *data; //Property to reference the Users DataModel in this View Controller
 
 @end

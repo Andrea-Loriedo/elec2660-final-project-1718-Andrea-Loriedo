@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.data = [[UsersDataModel alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -31,25 +32,38 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView numberOfRowsInSection: (NSInteger)section {
+    return 1; //There is only one section in our table view, and it's the one containing all the users IDs and the corresponding data
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+  
+    NSInteger numberOfRows = 0;
+    
+    if ( section == 0) {
+        numberOfRows = self.data.usersArray.count; //The table will contain as many rows as the number of elements in the users array
+    }
+    return numberOfRows;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
+    if (indexPath.section == 0){
+        
+        Users *tempUsers = [self.data.usersArray objectAtIndex:indexPath.row]; //Temporary object to set the cell properties
+        
+        cell.textLabel.text = tempUsers.ID; //The "text" label in the cell will display the string "ID'
+        cell.detailTextLabel.text = tempUsers.userID; //The "detail" label in the cell will display the User ID and the corresponding data when clicked
+        
+    }
+    
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -85,14 +99,30 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if([[segue identifier] isEqualToString:@"ShowResultsData"]){
+        
+        ResultsViewController *destinationViewController = [segue destinationViewController];
+        
+        NSIndexPath *indexpath = [self.tableView indexPathForSelectedRow];
+        
+        if (indexpath.section == 0){
+            
+            Users *tempUsers = [self.data.usersArray objectAtIndex:indexpath.row];
+            destinationViewController.users = tempUsers;
+            
+        }
+        
+    }
+    
 }
-*/
+
 
 @end

@@ -15,6 +15,9 @@
 		652D19DC2006472900FA9883 /* Save new profile button.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D19DA2006472200FA9883 /* Save new profile button.png */; };
 		652D19DD2006472900FA9883 /* Load profile button.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D19DB2006472600FA9883 /* Load profile button.png */; };
 		652D19DF2006482200FA9883 /* Back button.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D19DE2006481D00FA9883 /* Back button.png */; };
+		652D19E22006557F00FA9883 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D19E12006557F00FA9883 /* Users.m */; };
+		652D19E52006568000FA9883 /* UsersDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D19E42006568000FA9883 /* UsersDataModel.m */; };
+		6554EB4E2006EC4100AFB62A /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554EB4D2006EC4100AFB62A /* ResultsViewController.m */; };
 		656A33E21FD159E8003FE35E /* TrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A33E11FD159E8003FE35E /* TrialViewController.m */; };
 		656A33E61FD16BBB003FE35E /* Start trial Button red.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E51FD16BBB003FE35E /* Start trial Button red.png */; };
 		656A33E81FD1809C003FE35E /* Back to main menu button.png in Resources */ = {isa = PBXBuildFile; fileRef = 656A33E71FD1809C003FE35E /* Back to main menu button.png */; };
@@ -67,6 +70,12 @@
 		652D19DA2006472200FA9883 /* Save new profile button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Save new profile button.png"; sourceTree = "<group>"; };
 		652D19DB2006472600FA9883 /* Load profile button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Load profile button.png"; sourceTree = "<group>"; };
 		652D19DE2006481D00FA9883 /* Back button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back button.png"; sourceTree = "<group>"; };
+		652D19E02006557F00FA9883 /* Users.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		652D19E12006557F00FA9883 /* Users.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
+		652D19E32006568000FA9883 /* UsersDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsersDataModel.h; sourceTree = "<group>"; };
+		652D19E42006568000FA9883 /* UsersDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsersDataModel.m; sourceTree = "<group>"; };
+		6554EB4C2006EC4100AFB62A /* ResultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		6554EB4D2006EC4100AFB62A /* ResultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		656A33E01FD159E8003FE35E /* TrialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrialViewController.h; sourceTree = "<group>"; };
 		656A33E11FD159E8003FE35E /* TrialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrialViewController.m; sourceTree = "<group>"; };
 		656A33E51FD16BBB003FE35E /* Start trial Button red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start trial Button red.png"; sourceTree = "<group>"; };
@@ -165,7 +174,13 @@
 				65AF64501FC0E240009D6315 /* AppDelegate.m */,
 				65AF64521FC0E240009D6315 /* UPIViewController.h */,
 				65AF64531FC0E240009D6315 /* UPIViewController.m */,
+				652D19E02006557F00FA9883 /* Users.h */,
+				652D19E12006557F00FA9883 /* Users.m */,
+				652D19E32006568000FA9883 /* UsersDataModel.h */,
+				652D19E42006568000FA9883 /* UsersDataModel.m */,
 				65AF64551FC0E240009D6315 /* Main.storyboard */,
+				6554EB4C2006EC4100AFB62A /* ResultsViewController.h */,
+				6554EB4D2006EC4100AFB62A /* ResultsViewController.m */,
 				652D19CA2003EE3100FA9883 /* TableViewController.h */,
 				652D19CB2003EE3100FA9883 /* TableViewController.m */,
 				651417C01FC1F52C00030A4C /* InstructionsViewController.h */,
@@ -379,13 +394,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652D19E52006568000FA9883 /* UsersDataModel.m in Sources */,
 				65AF64541FC0E240009D6315 /* UPIViewController.m in Sources */,
 				656A33E21FD159E8003FE35E /* TrialViewController.m in Sources */,
 				65AF645F1FC0E240009D6315 /* main.m in Sources */,
 				65AF64511FC0E240009D6315 /* AppDelegate.m in Sources */,
+				652D19E22006557F00FA9883 /* Users.m in Sources */,
 				651417C21FC1F52C00030A4C /* InstructionsViewController.m in Sources */,
 				652D19CC2003EE3200FA9883 /* TableViewController.m in Sources */,
 				651417BF1FC1F49900030A4C /* PageViewController.m in Sources */,
+				6554EB4E2006EC4100AFB62A /* ResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

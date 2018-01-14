@@ -16,19 +16,18 @@
 @synthesize name, surname, age, IDCode, status; //Synthesizing these instance variables tells the compiler to automaticaly generate accessor methods for them
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    date = [[UIDatePicker alloc] init]; //Initialize date picker
-    date.datePickerMode = UIDatePickerModeDate;
+    date = [[UIDatePicker alloc] init]; //Initializes date picker
+    date.datePickerMode = UIDatePickerModeDate; //Sets the date picker mode
     
-    NSString *docsDir;
-    NSArray *dirPaths;
+    NSString *docsDir; //NSString storing the name of the application's documents directory
+    NSArray *dirPaths; //NSArray to store the database directory paths (possibility to store several direcories for several databases)
     
     // Get the documents directory
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //Finds the application's documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //Finds the application's documents directory and stores it at index 0 in the "dirPaths" array
     
-    docsDir = [dirPaths objectAtIndex:0]; //Stores the directory in a string variable called docsDir
+    docsDir = [dirPaths objectAtIndex:0]; //Gets the documents directory from the "dirPaths" array and stores it in a NSString property called "docsDir"
     
     
     databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"users.db"]]; // Builds the path to the "users.db" database file
@@ -40,7 +39,7 @@
     {
         const char *dbpath = [databasePath UTF8String]; //If the database path doesn't exist yet, it will be converted to a UTF-8 character string and then created before being passed to the function to open the database
         
-        if (sqlite3_open(dbpath, &userDataBase) == SQLITE_OK) //If the database path already exists...
+        if (sqlite3_open(dbpath, &userDataBase) == SQLITE_OK) //If the database path has been created...
         {
             char *errMsg;
             
@@ -80,25 +79,25 @@
         //If the database file is opened correctly, the text will be extracted from the name, surname, age and IDcode text fields, an SQL INSERT statement will be constructed and executed, and the user information will be added as a record to the users database
         NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO USERS (name, surname, age, IDCode) VALUES (\"%@\", \"%@\", \"%@\", \"%@\")", name.text, surname.text, age.text, IDCode.text];
         
-        const char *insert_stmt = [insertSQL UTF8String];
+        const char *insert_stmt = [insertSQL UTF8String]; //Conversion of the INSERT SQL statement to a UTF-8 String
         
         sqlite3_prepare_v2(userDataBase, insert_stmt, -1, &statement, NULL);
         if (sqlite3_step(statement) == SQLITE_DONE)
         {
-            status.text = @"New user added successfully";
+            status.text = @"New user added successfully"; //If the statement has been exectuded correctly, this message will be displayed in the status label
             
         } else {
-            status.text = @"Failed to add user";
+            status.text = @"Failed to add user"; //If something goes wrong with the INSERT SQL statement, the status label will display this message
         }
-        sqlite3_finalize(statement);
-        sqlite3_close(userDataBase);
+        sqlite3_finalize(statement); //The INSERT SQL statement is finalized
+        sqlite3_close(userDataBase); //The users database is closed
     }
     
 }
 
 - (IBAction)loadProfile:(id)sender {
     
-    const char *dbpath = [databasePath UTF8String];  //Database path conversion to a UTF-8 character string
+    const char *dbpath = [databasePath UTF8String];  //Database path conversion from NSString to a UTF-8 character string
     sqlite3_stmt *statement;
     
     if (sqlite3_open(dbpath, &userDataBase) == SQLITE_OK)
@@ -106,7 +105,7 @@
         //If the dababase path is opened correctly, a SQL SELECT statement is prepared to get the user details from the row that contains the input IDCode
         NSString *querySQL = [NSString stringWithFormat: @"SELECT name, surname, age FROM users WHERE IDCode =\"%@\"", IDCode.text];
         
-        const char *query_stmt = [querySQL UTF8String]; //
+        const char *query_stmt = [querySQL UTF8String]; //Conversion of the SELECT SQL statement to a UTF-8 String
         
         if (sqlite3_prepare_v2(userDataBase, query_stmt, -1, &statement, NULL) == SQLITE_OK)
         {   //If a row of the table matching the IDCode is found, a SQLITE_ROW result is returned
@@ -126,16 +125,15 @@
                 NSString *ageField = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
                 age.text = ageField;
                 
-                
             } else {
                 
-                status.text = @"User profile not found"; //If a SQLITE_ROW result is returned, the status label displays this message
+                status.text = @"User profile not found"; //If a SQLITE_ROW result isn't returned, the status label displays this message
                 //The name, surname and age text fields will be empty
                 name.text = @"";
                 surname.text = @"";
                 age.text = @"";
             }
-            sqlite3_finalize(statement); //The SQL statement is finalized
+            sqlite3_finalize(statement); //The SELECT SQL statement is finalized
         }
         sqlite3_close(userDataBase); //The users database is closed
     }
@@ -156,10 +154,11 @@
        [self.IDCode resignFirstResponder];
     }
 }
+
 - (IBAction)date:(id)sender {
 
-    NSDate *chosenDate = [self.datePicker date];
-    NSLog(@"%@", [NSString stringWithFormat: @"%@", chosenDate]);
+    NSDate *chosenDate = [self.datePicker date]; //Date chosen by the user using the date picker
+    NSLog(@"%@", [NSString stringWithFormat: @"%@", chosenDate]); //The date will be displayed in the debugger
    
 }
 @end

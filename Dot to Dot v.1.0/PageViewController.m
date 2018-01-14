@@ -72,7 +72,7 @@
         return nil;
 }
     index++;
-    if (index == instructions.count){ //if the index is equal to the number of elements in the array
+    if (index == instructions.count){ //If the index is equal to the number of elements in the array
         return nil;
     }
     return [self viewControllerAtIndex:index];
